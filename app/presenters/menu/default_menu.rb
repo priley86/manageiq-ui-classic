@@ -7,7 +7,8 @@ module Menu
           clouds_menu_section,
           infrastructure_menu_section,
           physical_infrastructure_menu_section,
-          container_menu_section
+          container_menu_section,
+          migration_menu_section
         ].compact)
       end
 
@@ -112,6 +113,12 @@ module Menu
           Menu::Item.new('container_image',          N_('Container Images'),    'container_image',          {:feature => 'container_image_show_list'},                 '/container_image'),
           Menu::Item.new('container_template',       N_('Container Templates'), 'container_template',       {:feature => 'container_template_show_list'},              '/container_template'),
           Menu::Item.new('container_topology',       N_('Topology'),            'container_topology',       {:feature => 'container_topology', :any => true},          '/container_topology')
+        ])
+      end
+
+      def migration_menu_section
+        Menu::Section.new(:clo, N_("Migration"), 'fa fa-plus', [
+          Menu::Item.new('overview', N_('Overview'), 'miq_report', {:feature => 'miq_report', :any => true}, '/migration')
         ])
       end
 
