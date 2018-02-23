@@ -118,7 +118,8 @@ module Menu
 
       def migration_menu_section
         Menu::Section.new(:clo, N_("Migration"), 'fa fa-plus', [
-          Menu::Item.new('overview', N_('Overview'), 'miq_report', {:feature => 'miq_report', :any => true}, '/migration')
+          Menu::Item.new('overview', N_('Overview'), 'miq_report', {:feature => 'miq_report', :any => true}, '/migration'),
+          Menu::Item.new('infrastructure_mappings', N_('Infrastructure Mappings'), 'miq_report', {:feature => 'miq_report', :any => true}, '/migration/infrastructure-mappings')
         ])
       end
 
