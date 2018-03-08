@@ -6,7 +6,7 @@ const { settings, output } = require('./configuration.js')
 const { env } = require('process')
 
 module.exports = merge(sharedConfig, {
-  devtool: 'inline-source-map',
+  devtool: 'cheap-module-eval-source-map',
 
   stats: {
     errorDetails: true

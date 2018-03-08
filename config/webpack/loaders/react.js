@@ -3,5 +3,6 @@ module.exports = {
   loader: 'babel-loader',
   query: {
     presets: ['react'],
-  },
+    cacheDirectory: true
+  }
 };
